@@ -29,6 +29,10 @@ jobs:
         run: npm ci
       - name: Build static website
         run: npx next build
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+        with:
+          enablement: true
       - name: Upload GitHub Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
